@@ -1,0 +1,256 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.Efect{
+
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+#window {
+    position: absolute;
+    margin-top: 20px;
+    height: 65%;
+    width: 60%;
+    margin-left: 16%;
+    background-color: black;
+    border-radius: 20px;
+    background-color: green;
+}
+
+#leftborder,
+#leftborder1 {
+    position: absolute;
+    height: 15%;
+    width: 2%;
+    left: 2%;
+    top: 45%;
+    background-color: red;
+}
+
+#rightborder,
+#rightborder1 {
+    position: absolute;
+    height: 15%;
+    width: 2%;
+    right: 2%;
+    top: 45%;
+    background-color: blue;
+}
+
+#rightborder1 {
+    opacity: 0;
+    width: 4%;
+    background-color: black;
+}
+
+#leftborder1 {
+    opacity: 0.5;
+    width: 1%;
+    background-color: black;
+}
+
+.vertical {
+    border-left: 3px dashed white;
+    opacity: 0.5;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+}
+
+
+#control {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 100px;
+}
+
+#player1 {
+    font-size: 50px;
+    font-family: 'Snell Roundhand', cursive;
+    position: absolute;
+    left: 19%;
+    top: 20%;
+}
+
+#player2 {
+    font-size: 50px;
+    font-family: 'Snell Roundhand', cursive;
+    position: absolute;
+    right: 22%;
+    top: 20%;
+}
+
+#Line1 {
+    width: 15px;
+    background-color: black;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    left: -4%;
+}
+
+#Line2 {
+    width: 15px;
+    background-color: black;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+}
+
+#names {
+    margin: 0;
+    position: absolute;
+    background: #23074d;
+    background: -webkit-linear-gradient(to right, #cc5333, #23074d);
+    background: linear-gradient(to right, #cc5333, #23074d);
+    width: 100%;
+    height: 5%;
+    color: white;
+    font-size: 25px;
+    top: 95%;
+    left: 0%;
+    font-family: serif;
+    text-align: center;
+}
+
+#Button {
+    position: absolute;
+    top: -75px;
+    left: 5px;
+    margin: 17vw 27vw;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    border: none;
+    border-radius: 25px;
+}
+
+#play1 {
+    width: 85%;
+    height: 25vw;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 5px
+}
+
+#homey {
+    border: 3px solid black;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: inline-block;
+}
+
+form {
+    display: inline-block;
+}
+
+#plays {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 30px;
+}
+
+#value {
+    margin: 7%;
+    border: 2px solid aliceblue;
+    border-width: 30px;
+    align-items: center;
+    width: 80%;
+    font-size: 20px;
+}
+
+.homeys {
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#homeys1 ,#homeys2 {
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-left: 0.7vw;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    background-color: #4CAF50;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+}
+#homeys1:hover {
+    background-color: #555555;
+    color: white;
+}
+
+#homeys2:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.error {
+    font-size: 15px;
+    border: 0.5px solid rgb(213, 55, 55);
+    color: rgb(213, 55, 55);
+    border-radius: 1px;
+}
+
+.errorvalide {
+    font-size: 15px;
+    border: 0.5px solid rgb(63, 213, 55);
+    color: rgb(110, 210, 53);
+    display: inline-block;
+    border-radius: 1px;
+    visibility:visible;
+    animation:move 5s;
+    -webkit-animation:move 5s infinite;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+}
+@-webkit-keyframes move /* Safari and Chrome */
+
+{
+0%   {opacity:1;}
+15%   {opacity:0.7;}  
+50%  {opacity:0.7;}
+75%  {opacity:0.3;}
+100% {opacity:0;}
+}
+
+.dayera {
+    width: 50px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 650px;
+    border-left: 50%;
+    z-index: 2;
+}
+#player1filed{
+    position: fixed;
+    width:7vw;
+    border:3px solid rgb(245, 54, 54);
+    border-radius:10px;
+    top:15vw;
+    left:5vw
+}
+#player2filed{
+    position: fixed;
+    width:7vw;
+    border:3px solid rgb(103, 103, 246);
+    border-radius:10px;
+    top:15vw;
+    right:5vw
+}

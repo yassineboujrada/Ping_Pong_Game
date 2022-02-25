@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static' , filename='CSS/style.css')}}">
+<div class='window'>
+    <form action="/reset" method="POST" id ='homey' style="padding-top: 70px; margin-top: 80px;">
+        <br><label for="new_password" style='margin-left: 1vw;'>New password</label><br>
+        <input type="password" name="new_password" placeholder='new password...' required , style="font-size: 20px;"><br>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class='error'>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <input type="submit" value='Confirm' style="font-size: 30px;" >
+    </form>
+</div>
+{% endblock content %}

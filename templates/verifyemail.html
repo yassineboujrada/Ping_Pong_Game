@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static' , filename='CSS/style.css')}}">
+<div class='window'>
+    <form action="/verification/email" method="POST" id ='homey'>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p class='error'>{{ msg }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <p style='margin-left: 4.7vw;'>check your Email !!</p>
+        <label for="passvalid" style='margin-left: 5vw;' >Enter the 6 digits </label><br>
+        <input type="text" name="passvalid" placeholder='six digits...' required , style="font-size: 30px;"><br>
+        <input type="submit" id='submit' value="Submit">
+        <p>Didn't get virefecation message? </p><a href="/email">Resend</a>
+    </form>
+</div>
+
+{% endblock content %}

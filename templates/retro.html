@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="Efect"> 
+<div id="all" class="kora">
+<link rel="stylesheet" href="{{ url_for('static',filename='CSS/retro.css') }}">
+    <div id='player1filed'>
+        <div  style="color: rgb(244, 10, 10);font-size: 2vw;text-align: center;"><span id='playernamedata1'></span></div>
+        <div id="score1" style="color: red;font-size: 5vw;text-align: center;">0</div>
+    </div>
+    <div id='player2filed'>
+        <div  style="color: blue;font-size: 2vw;text-align: center;"><span id='playernamedata2'></span></div>
+        <div id="score2" style="color: blue;font-size: 5vw;text-align: center;">0</div>
+    </div>
+        <!-- Game Area-->
+<div id="window" >
+        <div id="Line1" ></div>
+        <div id="leftborder1"></div>
+        <div id="rightborder"></div>
+        <div id="leftborder"></div>
+        <div id="rightborder1"></div>
+        <div id="Line2"></div>
+        <div class="vertical"></div>
+        <button id="Button">Play</button>
+        <svg id='hell' width=100% height='100% '>
+            
+            <circle id='texthey' cx='398' cy='260' r='10' fill='white'>
+
+            </circle></svg>         
+        <div class="homeys">
+            <input type="button" id='homeys1' value="SAVE SCORE" onclick="out()" >
+            <input type="button" id='homeys2' value="LOG OUT" onclick="location='/logout'" >
+        </div>
+</div>
+            <p class='errorvalide'>hellother</p>
+</div>
+</div>
+<script>
+    var user = JSON.parse('{{ user | tojson | safe}}');
+</script>
+<footer id="names">abdlouahab bella | hamza bousslama | oussama qouti | yassine boujrada</footer>
+<script src="{{ url_for('static',filename='JS/Game.js') }}"></script>
+{% endblock content %}

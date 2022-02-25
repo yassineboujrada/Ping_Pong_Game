@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css') }}">
+
+<header id="about"> About Game</header>
+<div class="window" >
+    <form action="/players" method="POST" id ='homey'>
+        <input type="text" name='player1' placeholder='First Player Name'required>            
+        <input type="text" name="player2" placeholder='Second Player Name' required><br>
+        <input type="submit" value="Submit">
+    </form> 
+</div>
+
+<p id="value1"> Welcome TO Our Game RETRO the roll is to simple . the game should start with to players . both of them gonna have a border to controle . the objective of this game is trying to controle the ball until it pass the another Border and try to avoid the same for you . in the end the first one who gonna pass 20 point is the winner . remmember to login with the same account to recovered your last score . Good luck and have a good time</p>
+
+
+{% endblock content %}

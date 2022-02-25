@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static' , filename='CSS/style.css')}}">
+<div class='window'>
+    <form action="/email" method="POST" style="margin-top: 80px;">
+        <label for="email_" id="amail">Enter your email to receive the code to reset your password</label><br>
+        <input type="text" name="email_" placeholder='email...' required ><br>
+        {% if error %}
+        <p class='error'>This Email dosen't have an account</p>
+        {% endif %}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class='error'>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <input type="submit" id='submit' value='Send' style="font-size: 30px;" >
+    </form>
+</div>
+{% endblock content %}

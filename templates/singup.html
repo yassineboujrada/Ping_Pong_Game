@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static' , filename='CSS/style.css')}}">
+<div class="window">
+    <h2>SIGN UP</h2>
+    <form action="/singup" method="POST" id ='homey'>
+        <input type="text" id='fastsave' name="name" placeholder='Username'required><br>
+        {% with messages = get_flashed_messages(category_filter=["inv1"]) %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class='error' class='disappear'>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <input type="text" id='email' name="email" placeholder='Email'required >
+        {% with messages = get_flashed_messages(category_filter=["inv2"]) %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class='error' class='disappear'>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <input type="password" id='password' name='password' placeholder='Password'required><br>
+        {% with messages = get_flashed_messages(category_filter=["inv3"]) %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class='error' class='disappear'>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <input type="password" id='confirm_password' name='confirm_password' placeholder='confirm password ...', required><br>
+        <input type="submit" onclick='fastsaves()' id='submit' value="Submit">
+    </form>
+</div>
+
+{% endblock content %}

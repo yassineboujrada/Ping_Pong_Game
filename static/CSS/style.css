@@ -1,0 +1,164 @@
+body {
+    background-image: url("../images/background.jpeg");
+    /* The image used */
+    background-color: #cccccc;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+#amail {
+    justify-content: center;
+    display: table-cell;
+    /*margin-top: 80px;
+    padding-top: 130px;*/
+}
+
+.window {
+    max-width: 350px;
+    border-radius: 20px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 40px;
+    color: #a8c6d8;
+    padding-top: 29px;
+    margin-top: 10%;
+    background-color: #5580ae84;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 5px;
+    outline: none;
+    border: none;
+    color: rgb(19, 17, 17);
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+    background-color: #00336631;
+}
+
+input[type=submit],
+#singup {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-left: 0.7vw;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background-color: #00336631;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+input[type=submit] {
+    color: greenyellow;
+}
+
+input[type=submit]:hover {
+    background: #60adde;
+    opacity: 0.7;
+    color: #fff;
+}
+
+input[type=submit]:hover :after {
+    width: 100%;
+}
+
+input[type=checkbox] {
+    margin-left: 0.8vw;
+}
+
+#about {
+    border: 0px solid;
+    text-align: center;
+    background: #b92b27;
+    background: -webkit-linear-gradient(to right, #e72f29, #2766b9);
+    background: linear-gradient(to right, #e72f29, #2766b9);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+    font-size: 80px;
+}
+
+#value1 {
+    position: relative;
+    margin: 1%;
+    border: 0px solid;
+    /* border-width: 5px;*/
+    align-items: center;
+    margin-left: 2vw;
+    width: 95%;
+    font-size: 23px;
+
+    background-color: rgba(255, 255, 255, 0.877);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+    font-family: sans-serif;
+}
+
+#singup,
+#reset {
+    margin-left: 0.8vw;
+    font-size: 12px;
+    margin-top: 1.5vw;
+}
+
+#singup {
+    margin-left: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    border: 0.001px solid rgba(0, 0, 0, 0.345);
+    background-color: rgb(75, 150, 75);
+}
+
+#singup:hover {
+    background-color: rgb(61, 116, 61);
+}
+
+.error {
+    margin-left: 0.8vw;
+    font-size: 14px;
+    border: 0.1px solid rgb(234, 78, 78);
+    width: 20.2vw;
+    margin-top: -0.8vw;
+    border-top: 0px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: rgb(222, 106, 106);
+    color: black;
+    text-align: center;
+    visibility:visible;
+    animation:move 5s;
+    -webkit-animation:move 5s infinite;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes move /* Safari and Chrome */
+
+{
+0%   {opacity:1;}
+15%   {opacity:0.7;}  
+50%  {opacity:0.7;}
+75%  {opacity:0.3;}
+100% {opacity:0;}
+}

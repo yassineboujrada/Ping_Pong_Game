@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static' , filename='CSS/style.css')}}">
+<main >
+<div class='window'>
+    <form action="/" method="POST" id ='homey'>
+
+        <input type="text" id='email' name="email" placeholder='Email ...' required ><br>
+        {% with messages = get_flashed_messages(category_filter=["inv1"]) %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class='error' class='disappear'>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        {% with messages = get_flashed_messages(category_filter=["inv3"]) %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class='error' class='disappear'>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <input type="password" style='font-family: unset;' id='password' name='password' placeholder='password ...', required ><br>
+        {% with messages = get_flashed_messages(category_filter=["inv2"]) %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class='error' class='disappear'>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <input type="checkbox" onclick="show_password()" ><span style='font-size:15px;'  > Show Password</span><br>
+        <input type="submit" id='submit' value="log In">
+    </form>
+    <button onclick="location='/singup'" id='singup'>Sing-up</button>
+    <p id='reset' >Foget password ? <a href="/email" style='margin-left: 5px;font-size: 14px;text-decoration: none;'>Reset</a></p>
+
+</div>
+</main>
+{% endblock content %}
